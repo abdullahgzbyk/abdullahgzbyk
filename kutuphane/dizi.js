@@ -27,21 +27,7 @@ for (let index=0;index < meyveler.length;index++){
 
 
 
-const currencies = [
-    { code: "USD", name: "US Dollar", symbol: "$" },
-    { code: "EUR", name: "Euro", symbol: "€" },
-    { code: "JPY", name: "Japanese Yen", symbol: "¥" },
-    { code: "GBP", name: "British Pound", symbol: "£" },
-    { code: "AUD", name: "Australian Dollar", symbol: "A$" },
-    { code: "CHF", name: "Swiss Franc", symbol: "CHF" },
-    { code: "CNY", name: "Chinese Yuan Renminbi", symbol: "¥" },
-    { code: "CAD", name: "Canadian Dollar", symbol: "$" },
-    { code: "NZD", name: "New Zealand Dollar", symbol: "$" },
-    { code: "SEK", name: "Swedish Krona", symbol: "kr" },
-  ];
-  
-    console.log (currencies)
-    const tablo = document.createElement('tablo');
+
     
   
    
