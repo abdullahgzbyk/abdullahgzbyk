@@ -65,12 +65,24 @@
         function sepeteekle() {
             //console.log(urunobjesi);
             const adetinputelementi = document.getElementById("adet")
+            //input kutucuğuna kullanıcının girdiği değeri(value) adetvalue değişkenine assign(tayin) ediyoruz
             const adetvalue = adetinputelementi.value
+            //debugger;
             //console.log()
             const toptutarelementi = document.getElementById("idtoplamtutar")
-            toptutarelementi.innerText = adetvalue * urunobjesi.fiyat
-            //kullanıcının inputa girdiği adedi localstorage'a kaydediyoruz
-            window.localStorage.setItem("alinanadet", adetvalue)
+            let alinanAdetLocalStorage = window.localStorage.getItem("alinanadet")
+
+            if (alinanAdetLocalStorage) {
+                console.log("alinanadet:", alinanAdetLocalStorage)
+                alinanAdetLocalStorage = parseInt(alinanAdetLocalStorage) + parseInt(adetvalue)
+
+            }
+            else {
+                alinanAdetLocalStorage = adetvalue
+            }
+            toptutarelementi.innerText = alinanAdetLocalStorage * urunobjesi.fiyat
+            //kullanıcı art arda sepete ekleme yapmışsa güncel alınan adet değerini localstorege'a kaydediyoruz
+            window.localStorage.setItem("alinanadet", alinanAdetLocalStorage)
             //window.localStorage.setItem("isim", "abdullah")
             //window.localStorage.setItem("yas", "30")
             //güncel adet değerini localstorage'dan alıyoruz
